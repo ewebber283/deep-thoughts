@@ -6,7 +6,7 @@ import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 const ThoughtForm = () => {
     const [thoughtText, setText] = useState('');
     const [characterCount, setCharacterCount] = useState(0);
-    cconst [addThought, { error }] = useMutation(ADD_THOUGHT, {
+    const [addThought, { error }] = useMutation(ADD_THOUGHT, {
         update(cache, { data: { addThought } }) {
           try {
             // could potentially not exist yet, so wrap in a try...catch
